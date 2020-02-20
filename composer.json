@@ -1,0 +1,10 @@
+{
+    "name": "juanmrad/unused-scanner",
+    "description": "Docker version of insolita/unused-scanner",
+    "license": "MIT",
+    "require": {
+        "php": ">=7.3.0",
+        "ext-mbstring": "*",
+        "insolita/unused-scanner": "^2.1"
+    }
+}

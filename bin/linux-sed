@@ -1,0 +1,9 @@
+#!/usr/bin/env sh
+
+set -eu
+
+ROOT="$( cd "$( dirname "$0" )/../" && pwd )"
+
+. "${ROOT}"/bin/lib/tty.sh
+
+docker run -i$TTY alpine:edge sed "$@"

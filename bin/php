@@ -1,0 +1,22 @@
+#!/bin/bash +x
+
+set -eu
+
+ROOT="$( cd "$( dirname "${BASH_SOURCE[0]}" )/../" && pwd )"
+
+. "${ROOT}"/bin/lib/tty.sh
+. "${ROOT}"/docker/lib/images.sh
+
+if [[ `uname` == 'Linux' ]]; then
+   USER_ARG="-e LOCAL_USER_ID=`id -u`"
+else
+   USER_ARG=''
+fi
+
+docker run \
+    -i${TTY} \
+    --rm \
+    ${USER_ARG} \
+    -v "$(pwd)":/workdir \
+    -v ~/.composer:/home/user/.composer \
+	${PHP_IMAGE} php "$@"

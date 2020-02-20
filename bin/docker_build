@@ -1,0 +1,21 @@
+#!/bin/bash +x
+
+set -eu
+
+ROOT="$( cd "$( dirname "$BASH_SOURCE[0]" )/../" && pwd )"
+
+. "${ROOT}"/docker/lib/images.sh
+
+# Download composer
+if [[ ! -f "$ROOT"/bin/composer ]]; then
+  . "$ROOT"/bin/init/install_composer.sh
+fi
+
+if [[ "${1:-''}" != 'production' ]]; then
+    composer install
+    # Build Gherkin CS Fixer image for testing
+    docker build ${ROOT} \
+      -f docker/Dockerfile \
+      -t local:unused-scanner \
+      --build-arg PHP_IMAGE
+fi
