@@ -5,6 +5,6 @@
     "require": {
         "php": ">=7.3.0",
         "ext-mbstring": "*",
-        "insolita/unused-scanner": "^2.1"
+        "insolita/unused-scanner": "^2.2"
     }
 }
