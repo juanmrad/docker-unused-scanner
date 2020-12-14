@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "insolita/unused-scanner",
-            "version": "2.1.1",
+            "version": "2.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Insolita/unused-scanner.git",
-                "reference": "193a8ad255425f49dc8739f9b5ff525e7d5fa595"
+                "reference": "11a478859410fb501c1ee94ca2cfb5c2f2e58490"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Insolita/unused-scanner/zipball/193a8ad255425f49dc8739f9b5ff525e7d5fa595",
-                "reference": "193a8ad255425f49dc8739f9b5ff525e7d5fa595",
+                "url": "https://api.github.com/repos/Insolita/unused-scanner/zipball/11a478859410fb501c1ee94ca2cfb5c2f2e58490",
+                "reference": "11a478859410fb501c1ee94ca2cfb5c2f2e58490",
                 "shasum": ""
             },
             "require": {
@@ -28,8 +28,8 @@
                 "symfony/finder": "^3.4|^4.0|^5.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "^7.0|^8.0",
-                "symfony/thanks": "1.0.*"
+                "phpunit/phpunit": "^7.0|^8.0|^9.0",
+                "symfony/thanks": "^1.2"
             },
             "bin": [
                 "unused_scanner"
@@ -57,7 +57,7 @@
                 }
             ],
             "description": "Detect unused composer dependencies",
-            "time": "2019-12-10T09:20:39+00:00"
+            "time": "2020-10-24T12:21:04+00:00"
         },
         {
             "name": "nesbot/carbon",
