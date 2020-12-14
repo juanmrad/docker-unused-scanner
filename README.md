@@ -13,11 +13,15 @@ docker run -v `pwd`:/app juanmrad/unused-scanner ./unused.php
 For power users with different configs:
 
 ```bash
-#add project dir reference. 
+# Add project dir reference. 
 PROJECT_DIR=$(pwd)
 
-#add location of config file relative to docker container
+# Add location of config file relative to docker container
 CONFIG=/workdir/config/unused-scanner/prod.php
+
+# Image Tag:
+# tag is defined as: juanmrad/unused-scanner:[package version]
+PHP_UNUSED_SCANNER=juanmrad/unused-scanner:2.2.0
 
 docker run \
     --rm \
