@@ -4,8 +4,8 @@ set -eu
 
 ROOT="$( cd "$( dirname "${BASH_SOURCE[0]}" )/../.." && pwd )"
 
-EXPECTED_VERSION=1.9.0
-EXPECTED_CHECKSUM=c9dff69d092bdec14dee64df6677e7430163509798895fbd54891c166c5c0875
+EXPECTED_VERSION=2.0.12
+EXPECTED_CHECKSUM=aaf3bc221512bd093701a101a1fe39bbec3c4deece88e6ef9faddda66d10e3e79eae6fff8c0486cde71771a6912b9b62
 
 # Check for existing installation
 if [ -e "${ROOT}"/bin/composer ]; then
@@ -36,7 +36,7 @@ curl -L https://getcomposer.org/download/${EXPECTED_VERSION}/composer.phar > "${
 
 echo -n "Checking the hash..."
 
-if [[ ! $(shasum -a 256 "${ROOT}"/bin/composer) = "$EXPECTED_CHECKSUM"* ]]; then
+if [[ ! $(shasum -a 384 "${ROOT}"/bin/composer) = "$EXPECTED_CHECKSUM"* ]]; then
     echo "ERROR: composer's sha256 doesn't match. Redownload it."
     exit 0
 else
