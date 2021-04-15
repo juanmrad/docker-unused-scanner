@@ -2,4 +2,4 @@
 
 set -eu
 
-export PHP_IMAGE=chekote/php:7.3.14.a-phpunit7
+export PHP_IMAGE=chekote/php:7.3.23-phpunit7
